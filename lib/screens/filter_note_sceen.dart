@@ -35,7 +35,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
         body: Column(
           children: [
             ListTile(
-              title: Text('Deporte'),
+              title: Text('Sport'),
               leading: Radio(
                 activeColor: Colors.black,
                 value: Categoria.sport,
@@ -48,7 +48,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               ),
             ),
             ListTile(
-              title: Text('Casa'),
+              title: Text('Home'),
               leading: Radio(
                 activeColor: Colors.black,
                 value: Categoria.home,
@@ -61,7 +61,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               ),
             ),
             ListTile(
-              title: Text('Personal'),
+              title: Text('My'),
               leading: Radio(
                 activeColor: Colors.black,
                 value: Categoria.my,
@@ -74,7 +74,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               ),
             ),
             ListTile(
-              title: Text('Trabajo'),
+              title: Text('Work'),
               leading: Radio(
                 activeColor: Colors.black,
                 value: Categoria.work,
@@ -87,7 +87,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               ),
             ),
             ListTile(
-              title: Text('Otro'),
+              title: Text('Other'),
               leading: Radio(
                 activeColor: Colors.black,
                 value: Categoria.other,

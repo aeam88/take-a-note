@@ -69,23 +69,30 @@ class _NoteListScreenState extends State<NoteListScreen> {
       body: RefreshIndicator(
         onRefresh: _getNotes,
         color: Colors.black,
-        child: ListView.separated(
-          // physics: BouncingScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
-          itemCount: _notes.length,
-          itemBuilder: (BuildContext context, int index) {
-            final note = _notes[index];
-            return NoteTile(
-              note: note,
-              updateNotes: _getNotes,
-            );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return const SizedBox(
-              height: 10.0,
-            );
-          },
-        ),
+        child: _notes.length > 0
+            ? ListView.separated(
+                padding: const EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
+                itemCount: _notes.length,
+                itemBuilder: (BuildContext context, int index) {
+                  final note = _notes[index];
+                  return NoteTile(
+                    note: note,
+                    updateNotes: _getNotes,
+                  );
+                },
+                separatorBuilder: (BuildContext context, int index) {
+                  return const SizedBox(
+                    height: 10.0,
+                  );
+                },
+              )
+            : Center(
+                child: Text(
+                  'Aún no tienes notas.',
+                  style: TextStyle(
+                      color: Colors.black, fontWeight: FontWeight.bold),
+                ),
+              ),
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color(0xFF8CF35A),
