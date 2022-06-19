@@ -33,7 +33,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
       _note = Note(
         titulo: '',
         contenido: '',
-        categoria: Categoria.my,
+        categoria: Categoria.personal,
       );
     }
 

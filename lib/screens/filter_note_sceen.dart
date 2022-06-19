@@ -12,7 +12,7 @@ class FilterNoteScreen extends StatefulWidget {
 }
 
 class _FilterNoteScreenState extends State<FilterNoteScreen> {
-  Categoria? _selectCat = Categoria.sport;
+  Categoria? _selectCat = Categoria.deporte;
 
   @override
   Widget build(BuildContext context) {
@@ -34,70 +34,60 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
         ),
         body: Column(
           children: [
-            ListTile(
-              title: Text('Sport'),
-              leading: Radio(
-                activeColor: Colors.black,
-                value: Categoria.sport,
-                groupValue: _selectCat,
-                onChanged: (Categoria? value) {
-                  setState(() {
-                    _selectCat = value;
-                  });
-                },
-              ),
+            RadioListTile(
+              title: Text('Deporte'),
+              activeColor: Colors.black,
+              value: Categoria.deporte,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
             ),
-            ListTile(
+            RadioListTile(
               title: Text('Home'),
-              leading: Radio(
-                activeColor: Colors.black,
-                value: Categoria.home,
-                groupValue: _selectCat,
-                onChanged: (Categoria? value) {
-                  setState(() {
-                    _selectCat = value;
-                  });
-                },
-              ),
+              activeColor: Colors.black,
+              value: Categoria.home,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
             ),
-            ListTile(
-              title: Text('My'),
-              leading: Radio(
-                activeColor: Colors.black,
-                value: Categoria.my,
-                groupValue: _selectCat,
-                onChanged: (Categoria? value) {
-                  setState(() {
-                    _selectCat = value;
-                  });
-                },
-              ),
+            RadioListTile(
+              title: Text('Personal'),
+              activeColor: Colors.black,
+              value: Categoria.personal,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
             ),
-            ListTile(
-              title: Text('Work'),
-              leading: Radio(
-                activeColor: Colors.black,
-                value: Categoria.work,
-                groupValue: _selectCat,
-                onChanged: (Categoria? value) {
-                  setState(() {
-                    _selectCat = value;
-                  });
-                },
-              ),
+            RadioListTile(
+              title: Text('Trabajo'),
+              activeColor: Colors.black,
+              value: Categoria.trabajo,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
             ),
-            ListTile(
-              title: Text('Other'),
-              leading: Radio(
-                activeColor: Colors.black,
-                value: Categoria.other,
-                groupValue: _selectCat,
-                onChanged: (Categoria? value) {
-                  setState(() {
-                    _selectCat = value;
-                  });
-                },
-              ),
+            RadioListTile(
+              title: Text('Otro'),
+              activeColor: Colors.black,
+              value: Categoria.otro,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
             ),
             const SizedBox(height: 32.0),
             Container(
