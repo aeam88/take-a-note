@@ -1,7 +1,6 @@
 import 'package:enum_to_string/enum_to_string.dart';
 import 'package:flutter/material.dart';
 import 'package:take_a_note/models/note_model.dart';
-import 'package:take_a_note/services/database_service.dart';
 
 class FilterNoteScreen extends StatefulWidget {
   final Function filterNotes;
@@ -18,6 +17,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Color(0xffEDEDED),
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Color(0xffEDEDED),

@@ -51,6 +51,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffEDEDED),
       appBar: AppBar(
         iconTheme: IconThemeData(
           color: Colors.black,

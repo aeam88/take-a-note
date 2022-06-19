@@ -40,6 +40,7 @@ class _NoteListScreenState extends State<NoteListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xffEDEDED),
       appBar: AppBar(
         backgroundColor: Color(0xffEDEDED),
         elevation: 0,
