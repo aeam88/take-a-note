@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Take a Note',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        colorScheme: ColorScheme.light(primary: Colors.black),
         textTheme: TextTheme(
           headline5: GoogleFonts.redRose(),
           subtitle1: GoogleFonts.redRose(),

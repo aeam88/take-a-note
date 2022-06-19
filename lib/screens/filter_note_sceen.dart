@@ -12,7 +12,7 @@ class FilterNoteScreen extends StatefulWidget {
 }
 
 class _FilterNoteScreenState extends State<FilterNoteScreen> {
-  Categoria? _selectCat = Categoria.deporte;
+  Categoria? _selectCat = Categoria.all;
 
   @override
   Widget build(BuildContext context) {
@@ -35,9 +35,20 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
         body: Column(
           children: [
             RadioListTile(
-              title: Text('Deporte'),
+              title: Text('All'),
               activeColor: Colors.black,
-              value: Categoria.deporte,
+              value: Categoria.all,
+              groupValue: _selectCat,
+              onChanged: (Categoria? value) {
+                setState(() {
+                  _selectCat = value;
+                });
+              },
+            ),
+            RadioListTile(
+              title: Text('Sport'),
+              activeColor: Colors.black,
+              value: Categoria.sport,
               groupValue: _selectCat,
               onChanged: (Categoria? value) {
                 setState(() {
@@ -57,9 +68,9 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               },
             ),
             RadioListTile(
-              title: Text('Personal'),
+              title: Text('My'),
               activeColor: Colors.black,
-              value: Categoria.personal,
+              value: Categoria.my,
               groupValue: _selectCat,
               onChanged: (Categoria? value) {
                 setState(() {
@@ -68,9 +79,9 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               },
             ),
             RadioListTile(
-              title: Text('Trabajo'),
+              title: Text('Work'),
               activeColor: Colors.black,
-              value: Categoria.trabajo,
+              value: Categoria.work,
               groupValue: _selectCat,
               onChanged: (Categoria? value) {
                 setState(() {
@@ -79,9 +90,9 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
               },
             ),
             RadioListTile(
-              title: Text('Otro'),
+              title: Text('Other'),
               activeColor: Colors.black,
-              value: Categoria.otro,
+              value: Categoria.other,
               groupValue: _selectCat,
               onChanged: (Categoria? value) {
                 setState(() {

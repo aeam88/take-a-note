@@ -1,6 +1,6 @@
 import 'package:enum_to_string/enum_to_string.dart';
 
-enum Categoria { deporte, home, personal, trabajo, otro }
+enum Categoria { all, sport, home, my, work, other }
 
 class Note {
   final int? id;

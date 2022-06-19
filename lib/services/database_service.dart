@@ -54,6 +54,9 @@ class DatabaseService {
 
   Future<List<Note>> getFilterNotes({String? filtro}) async {
     final db = await this.db;
+
+    if (filtro == 'all') return getAllNotes();
+
     final notesData = await db.query(_notesTable,
         where: '$_colCategoria = ?',
         whereArgs: [filtro],

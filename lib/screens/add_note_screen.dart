@@ -1,4 +1,5 @@
 import 'package:enum_to_string/enum_to_string.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:take_a_note/models/note_model.dart';
 import 'package:take_a_note/services/database_service.dart';
@@ -33,7 +34,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
       _note = Note(
         titulo: '',
         contenido: '',
-        categoria: Categoria.personal,
+        categoria: Categoria.my,
       );
     }
 
@@ -129,6 +130,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                   icon: const Icon(Icons.arrow_drop_down_sharp),
                   iconSize: 22.0,
                   items: Categoria.values
+                      .where((element) => element != Categoria.all)
                       .map(
                         (categoria) => DropdownMenuItem(
                           value: categoria,
@@ -141,7 +143,12 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                       )
                       .toList(),
                   style: const TextStyle(fontSize: 16.0),
-                  decoration: const InputDecoration(labelText: 'Categoría'),
+                  decoration: const InputDecoration(
+                    labelText: 'Categoría',
+                    focusedBorder: UnderlineInputBorder(
+                      borderSide: BorderSide(color: Colors.black),
+                    ),
+                  ),
                   onChanged: (value) =>
                       setState(() => _note = _note!.copyWith(categoria: value)),
                 ),
