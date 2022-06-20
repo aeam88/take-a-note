@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       // home: Center(child: Text('Prueba')),
-      home: NoteListScreen(),
+      home: SplashScreen(),
     );
   }
 }
