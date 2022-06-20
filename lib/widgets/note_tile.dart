@@ -22,7 +22,7 @@ class NoteTile extends StatelessWidget {
       child: Dismissible(
         onDismissed: (_) {
           DatabaseService.instance.delete(note.id!);
-          updateNotes();
+          // updateNotes();
         },
         key: UniqueKey(),
         direction: DismissDirection.endToStart,
