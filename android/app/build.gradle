@@ -43,7 +43,7 @@ android {
         applicationId "us.alejandroalvarez.take_a_note"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 3
+        versionCode 4
         versionName flutterVersionName
     }
 
