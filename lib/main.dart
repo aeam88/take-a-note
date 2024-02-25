@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: TextTheme(
-          headline5: GoogleFonts.redRose(),
-          subtitle1: GoogleFonts.redRose(),
-          bodyText1: GoogleFonts.redRose(),
-          bodyText2: GoogleFonts.openSans(),
+          headlineSmall: GoogleFonts.redRose(),
+          titleMedium: GoogleFonts.redRose(),
+          bodyLarge: GoogleFonts.redRose(),
+          bodyMedium: GoogleFonts.openSans(),
         ),
       ),
       // home: Center(child: Text('Prueba')),

@@ -45,7 +45,7 @@ class NoteTile extends StatelessWidget {
             minVerticalPadding: 17.0,
             title: Text(
               note.titulo,
-              style: Theme.of(context).textTheme.subtitle1?.merge(TextStyle(
+              style: Theme.of(context).textTheme.titleMedium?.merge(TextStyle(
                     color: Colors.black,
                   )),
             ),
@@ -55,7 +55,7 @@ class NoteTile extends StatelessWidget {
               maxLines: 2,
               style: Theme.of(context)
                   .textTheme
-                  .bodyText2
+                  .bodyMedium
                   ?.merge(TextStyle(color: Color(0xFF444444), fontSize: 12.0)),
             ),
             trailing: Column(
@@ -74,7 +74,7 @@ class NoteTile extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
-                        .bodyText1
+                        .bodyLarge
                         ?.merge(TextStyle(color: Colors.white, fontSize: 13.0)),
                   ),
                 ),

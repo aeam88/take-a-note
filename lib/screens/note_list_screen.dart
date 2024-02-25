@@ -46,7 +46,7 @@ class _NoteListScreenState extends State<NoteListScreen> {
         elevation: 0,
         title: Text(
           'Mis notas',
-          style: Theme.of(context).textTheme.headline5?.merge(TextStyle(
+          style: Theme.of(context).textTheme.headlineSmall?.merge(TextStyle(
                 color: Colors.black,
               )),
         ),

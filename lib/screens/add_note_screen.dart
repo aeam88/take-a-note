@@ -61,7 +61,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
         centerTitle: true,
         title: Text(
           !_isEditing ? 'Añadir nota' : 'Editar nota',
-          style: Theme.of(context).textTheme.headline5?.merge(TextStyle(
+          style: Theme.of(context).textTheme.headlineSmall?.merge(TextStyle(
                 color: Colors.black,
               )),
         ),
@@ -148,7 +148,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                 const SizedBox(height: 32.0),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Color(0xFF8CF35A),
+                      backgroundColor: Color(0xFF8CF35A),
                       minimumSize: const Size.fromHeight(45.0),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(5.0),
@@ -156,7 +156,7 @@ class _AddNoteScreenState extends State<AddNoteScreen> {
                   onPressed: _submit,
                   child: Text(
                     !_isEditing ? 'Crear nota' : 'Guardar',
-                    style: Theme.of(context).textTheme.headline5?.merge(
+                    style: Theme.of(context).textTheme.headlineSmall?.merge(
                           TextStyle(color: Colors.black, fontSize: 16.0),
                         ),
                   ),

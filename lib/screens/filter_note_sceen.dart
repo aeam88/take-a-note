@@ -27,7 +27,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
           ),
           title: Text(
             'Filtrar categoría',
-            style: Theme.of(context).textTheme.headline5?.merge(TextStyle(
+            style: Theme.of(context).textTheme.headlineSmall?.merge(TextStyle(
                   color: Colors.black,
                 )),
           ),
@@ -105,7 +105,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
                   const EdgeInsets.symmetric(vertical: 50.0, horizontal: 20.0),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color(0xFF8CF35A),
+                    backgroundColor: Color(0xFF8CF35A),
                     minimumSize: const Size.fromHeight(45.0),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
@@ -113,7 +113,7 @@ class _FilterNoteScreenState extends State<FilterNoteScreen> {
                 onPressed: _filtrarCate,
                 child: Text(
                   'Filtrar',
-                  style: Theme.of(context).textTheme.headline5?.merge(
+                  style: Theme.of(context).textTheme.headlineSmall?.merge(
                         TextStyle(color: Colors.black, fontSize: 16.0),
                       ),
                 ),
